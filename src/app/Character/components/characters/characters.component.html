@@ -4,7 +4,10 @@
     <mat-icon>view_list</mat-icon>
   </button>
   <button (click)="viewAsCards()"><mat-icon>view_module</mat-icon></button>
-  <!-- Listado -->
+  <!-- Grid view -->
+
+  <app-grid *ngIf="view_list" [characters]="characters"></app-grid>
+  <!--
   <table
     mat-table
     [dataSource]="characters"
@@ -28,19 +31,12 @@
       [routerLink]="['/character', character.id]"
     ></tr>
   </table>
-
+-->
+  <!-- Card view -->
   <div class="contenedor-cards" *ngIf="view_cards">
-    <mat-card
+    <app-card
+      [character]="character"
       *ngFor="let character of characters"
-      [routerLink]="['/character', character.id]"
-    >
-      <mat-card-content>
-        <img mat-card-image src="{{ character.image }}" class="card-image" />
-        <div>
-          <div>{{ character.name }}</div>
-          <div>Status: {{ character.status }}</div>
-        </div>
-      </mat-card-content>
-    </mat-card>
+    ></app-card>
   </div>
 </div>

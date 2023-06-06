@@ -5,7 +5,6 @@ import { AppState } from 'src/app/app.reducers';
 import * as CharactersAction from '../../actions';
 
 import { CharacterDTO } from 'src/app/Character/models/character.dto';
-import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({
   selector: 'app-characters',
@@ -17,12 +16,7 @@ export class CharactersComponent {
   view_list: boolean = true;
   view_cards: boolean = !this.view_list;
 
-  displayedColumns: string[] = ['name', 'status'];
-
-  constructor(
-    //    private charactersService: CharactersService,
-    private store: Store<AppState>
-  ) {
+  constructor(private store: Store<AppState>) {
     this.store.select('characters').subscribe((charactersResponse) => {
       this.characters = charactersResponse.characters;
     });

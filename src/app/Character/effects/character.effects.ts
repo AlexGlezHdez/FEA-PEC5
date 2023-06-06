@@ -4,7 +4,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { tap, catchError, exhaustMap, finalize, map } from 'rxjs/operators';
 import * as CharacterActions from '../actions';
-import { CharactersService } from '../../services/characters.service';
+import { CharactersService } from '../services/characters.service';
 
 @Injectable()
 export class CharactersEffects {

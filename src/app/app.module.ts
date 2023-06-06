@@ -23,7 +23,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EffectsModule } from '@ngrx/effects';
 
-import { PageLoaderComponent } from './components/page-loader/page-loader.component';
+import { PageLoaderComponent } from './Shared/components/page-loader/page-loader.component';
 
 @NgModule({
   declarations: [AppComponent, PageLoaderComponent],
