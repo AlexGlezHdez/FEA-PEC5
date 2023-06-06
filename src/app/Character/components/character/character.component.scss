@@ -1,0 +1,51 @@
+.ficha {
+  margin: 50px auto;
+  max-width: max-content;
+  border-color: purple;
+
+}
+
+.ficha-personaje {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 16px;
+  gap: 16px;
+}
+
+.ficha-personaje a {
+  margin-left: 20px;
+}
+
+.ficha-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.ficha-contenido {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 10px;
+}
+
+.ficha-imagen {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: 10px;
+}
+
+.ficha-datos {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.episodios-personaje {
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+
