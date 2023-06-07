@@ -6,7 +6,7 @@
   <button (click)="viewAsCards()"><mat-icon>view_module</mat-icon></button>
   <!-- Grid view -->
 
-  <app-grid *ngIf="view_list" [characters]="characters"></app-grid>
+  <app-grid *ngIf="view_list" [characters]="characters" [@fadeCard]></app-grid>
   <!--
   <table
     mat-table
@@ -33,7 +33,7 @@
   </table>
 -->
   <!-- Card view -->
-  <div class="contenedor-cards" *ngIf="view_cards">
+  <div class="contenedor-cards" *ngIf="view_cards" [@fadeCard]>
     <app-card
       [character]="character"
       *ngFor="let character of characters"

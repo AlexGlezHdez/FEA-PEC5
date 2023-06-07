@@ -7,6 +7,8 @@ import { AppState } from 'src/app/app.reducers';
 
 import { filter } from 'rxjs/operators';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 @Component({
   selector: 'app-page-loader',
   templateUrl: './page-loader.component.html',
