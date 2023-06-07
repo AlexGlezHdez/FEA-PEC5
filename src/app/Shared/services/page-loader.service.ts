@@ -14,7 +14,6 @@ export class PageLoaderService {
   }
 
   hide() {
-    console.log('Ocultando!!!');
     this.loading$.next(false);
   }
 

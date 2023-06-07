@@ -23,6 +23,6 @@ export const getCharacterByIdSuccess = createAction(
   props<{ character: CharacterDTO }>()
 );
 export const getCharacterByIdFailure = createAction(
-  '[Character] Get characters failure',
+  '[Character] Get character failure',
   props<{ payload: HttpErrorResponse }>()
 );

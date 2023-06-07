@@ -37,6 +37,13 @@ export class PageLoaderComponent {
           this.pageLoaderService.hide();
         }, 1000);
       });
+
+    this.store.pipe(filter((store) => store.characters.error)).subscribe(() => {
+      // Agregamos un pequeño retraso antes de ocultar el spinner para simluar la carga
+      setTimeout(() => {
+        this.pageLoaderService.hide();
+      }, 1000);
+    });
   }
 
   private _subscribed: boolean = true;
