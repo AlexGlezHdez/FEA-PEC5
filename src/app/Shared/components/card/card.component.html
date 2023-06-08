@@ -1,9 +1,9 @@
-<mat-card [routerLink]="['/character', character.id]">
-  <mat-card-content>
+<mat-card [routerLink]="['/character', character.id]" class="card">
+  <mat-card-content class="card-container">
     <img mat-card-image src="{{ character.image }}" class="card-image" />
-    <div>
-      <div>{{ character.name }}</div>
-      <div>Status: {{ character.status }}</div>
+    <div class="card-data">
+      <div class="card-name">{{ character.name }}</div>
+      <div class="card-status">Status: {{ character.status }}</div>
     </div>
   </mat-card-content>
 </mat-card>
