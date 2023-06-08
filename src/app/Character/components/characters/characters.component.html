@@ -1,14 +1,23 @@
 <div class="container">
   <div class="header">
     <h1 class="title">
-      <img src="/assets/icons/icon-72x72.png" class="title-image" />
+      <img
+        src="/assets/icons/icon-72x72.png"
+        class="title-image"
+        alt="Rick & Morty Logo"
+      />
       Rick & Morty: Characters
     </h1>
     <div class="button-container">
-      <button mat-raised (click)="viewAsList()" class="view-button">
+      <button
+        mat-raised
+        (click)="viewAsList()"
+        class="view-button"
+        title="View as list"
+      >
         <mat-icon>view_list</mat-icon>
       </button>
-      <button (click)="viewAsCards()" class="view-button">
+      <button (click)="viewAsCards()" class="view-button" title="View as cards">
         <mat-icon>view_module</mat-icon>
       </button>
     </div>
