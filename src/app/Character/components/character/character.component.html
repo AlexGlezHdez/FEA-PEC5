@@ -1,33 +1,42 @@
+<div class="header">
+  <h1 class="title">
+    <img src="/assets/icons/icon-72x72.png" class="title-image" />
+    <div class="title-text">
+      <span>Rick & Morty:</span><span>Character datasheet</span>
+    </div>
+  </h1>
+</div>
 <div class="ficha">
   <div *ngIf="character" class="ficha-personaje">
     <div class="ficha-titulo">
       {{ character.name }}
       <a mat-raised-button color="warn" routerLink="/">Back</a>
     </div>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title> This is the expansion title </mat-panel-title>
-      </mat-expansion-panel-header>
+    <button mat-button color="primary" (click)="togglePanel()">
+      {{ panelOpenState ? "Hide details..." : "Show more details..." }}
+    </button>
+    <mat-expansion-panel [expanded]="panelOpenState">
       <div class="ficha-contenido">
         <img class="ficha-imagen" src="{{ character.image }}" alt="" />
         <div class="ficha-datos">
-          <div><span class="titulo">Status:</span>{{ character.status }}</div>
-          <div><span class="titulo">Species:</span>{{ character.species }}</div>
-          <div *ngIf="character.type">
-            <span class="titulo">Type:</span>{{ character.type }}
+          <div class="data">
+            <span class="data-title">Status:</span>{{ character.status }}
           </div>
-          <div><span class="titulo">Gender:</span>{{ character.gender }}</div>
-          <div>
-            <span class="titulo">Origin:</span>{{ character.origin.name }}
+          <div class="data">
+            <span class="data-title">Species:</span>{{ character.species }}
           </div>
-          <div>
-            <span class="titulo">Location:</span>{{ character.location.name }}
+          <div class="data" *ngIf="character.type">
+            <span class="data-title">Type:</span>{{ character.type }}
           </div>
-        </div>
-        <div class="episodios-personaje">
-          Episodes:
-          <div *ngFor="let episode of character.episode">
-            {{ episode }}
+          <div class="data">
+            <span class="data-title">Gender:</span>{{ character.gender }}
+          </div>
+          <div class="data">
+            <span class="data-title">Origin:</span>{{ character.origin.name }}
+          </div>
+          <div class="data">
+            <span class="data-title">Location:</span
+            >{{ character.location.name }}
           </div>
         </div>
       </div>

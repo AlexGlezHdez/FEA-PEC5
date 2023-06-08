@@ -1,21 +1,28 @@
 <div class="container">
-  <h1 class="title">
-    <img src="/assets/icons/icon-72x72.png" class="title-image" />
-    Rick & Morty: Characters
-  </h1>
-  <div class="button-container">
-    <button mat-raised (click)="viewAsList()" class="view-button">
-      <mat-icon>view_list</mat-icon>
-    </button>
-    <button (click)="viewAsCards()" class="view-button">
-      <mat-icon>view_module</mat-icon>
-    </button>
+  <div class="header">
+    <h1 class="title">
+      <img src="/assets/icons/icon-72x72.png" class="title-image" />
+      Rick & Morty: Characters
+    </h1>
+    <div class="button-container">
+      <button mat-raised (click)="viewAsList()" class="view-button">
+        <mat-icon>view_list</mat-icon>
+      </button>
+      <button (click)="viewAsCards()" class="view-button">
+        <mat-icon>view_module</mat-icon>
+      </button>
+    </div>
   </div>
   <!-- Grid view -->
-  <app-grid *ngIf="view_list" [characters]="characters" [@fadeCard]></app-grid>
+  <app-grid
+    class="grid-container"
+    *ngIf="view_list"
+    [characters]="characters"
+    [@fadeCard]
+  ></app-grid>
 
   <!-- Card view -->
-  <div class="contenedor-cards" *ngIf="view_cards" [@fadeCard]>
+  <div class="cards-container" *ngIf="view_cards" [@fadeCard]>
     <app-card
       [character]="character"
       *ngFor="let character of characters"

@@ -1,8 +1,41 @@
-.ficha {
-  margin: 50px auto;
-  max-width: max-content;
-  border-color: purple;
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+  max-width: 800px;
+  margin: 1rem auto 0;
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+  }
+}
+
+.title {
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+	gap: 1rem;
+}
+
+.title-image {
+  height: 60px;
+  vertical-align: middle;
+}
+
+.title-text {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.ficha {
+  margin: 0 auto 2rem;
+  max-width: 400px;
+
+  @media (min-width: 600px) {
+    max-width: 600px;
+  }
 }
 
 .ficha-personaje {
@@ -13,39 +46,62 @@
   gap: 16px;
 }
 
-.ficha-personaje a {
-  margin-left: 20px;
-}
-
 .ficha-titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 21px;
+}
+.mat-expansion-panel {
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+
+  @media (min-width: 600px) {
+    width: 100%;
+  }
 }
 
 .ficha-contenido {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 -24px -16px;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
 }
 
+
 .ficha-imagen {
-  width: 200px;
-  height: 200px;
+  width: 100%;
   object-fit: cover;
   grid-column: 1;
   grid-row: 1;
-  border-radius: 10px;
+
+  @media (min-width: 600px) {
+    width: 275px;
+  }
 }
 
 .ficha-datos {
-  grid-column: 2;
-  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
 }
 
-.episodios-personaje {
-  grid-column: 1/-1;
-  grid-row: 2;
+.data {
+  display: flex;
+  justify-content: space-between;
+  text-align: end;
+  font-size: 20px;
 }
 
+.data-title {
+	text-transform: uppercase;
+	font-weight: 500;
+  color: #673ab7;
+  margin-right: 10px;
+}

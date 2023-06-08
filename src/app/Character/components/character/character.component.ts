@@ -15,6 +15,8 @@ import { CharacterDTO } from 'src/app/Character/models/character.dto';
 export class CharacterComponent {
   character!: CharacterDTO;
 
+  panelOpenState: boolean = true;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private store: Store<AppState>
@@ -28,5 +30,9 @@ export class CharacterComponent {
     this.store.dispatch(
       CharactersAction.getCharacterById({ characterId: identifier })
     );
+  }
+
+  togglePanel() {
+    this.panelOpenState = !this.panelOpenState;
   }
 }
