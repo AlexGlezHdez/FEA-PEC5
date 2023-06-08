@@ -15,7 +15,7 @@ import { CharacterDTO } from 'src/app/Character/models/character.dto';
 export class CharacterComponent {
   character!: CharacterDTO;
 
-  panelOpenState: boolean = true;
+  panelOpenState: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
