@@ -7,7 +7,7 @@
   </h1>
 </div>
 <div class="ficha">
-  <div *ngIf="character" class="ficha-personaje">
+  <div *ngIf="character.id" class="ficha-personaje">
     <div class="ficha-titulo">
       {{ character.name }}
       <a mat-raised-button color="warn" routerLink="/">Back</a>
@@ -42,5 +42,10 @@
       </div>
     </mat-expansion-panel>
   </div>
-  <div *ngIf="!character">Character not found!</div>
+  <div *ngIf="!character.id" class="character-error">
+    <div class="ficha-titulo error">
+      Character not found!!
+      <a mat-raised-button color="warn" routerLink="/">Back</a>
+    </div>
+  </div>
 </div>

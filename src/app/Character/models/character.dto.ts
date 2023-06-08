@@ -18,5 +18,14 @@ export class CharacterDTO {
   url!: string;
   created!: string;
 
-  constructor() {}
+  constructor() {
+    this.id = '';
+    this.name = 'Unknown';
+    this.status = '-';
+    this.species = '-';
+    this.type = '';
+    this.gender = '';
+    this.origin = { name: '', url: '' };
+    this.location = { name: '', url: '' };
+  }
 }

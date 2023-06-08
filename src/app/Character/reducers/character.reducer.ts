@@ -61,6 +61,7 @@ const _charactersReducer = createReducer(
   })),
   on(getCharacterByIdFailure, (state, { payload }) => ({
     ...state,
+    character: new CharacterDTO(),
     loading: false,
     loaded: false,
     error: { payload },
