@@ -33,9 +33,9 @@ export class PageLoaderComponent {
       .pipe(filter((store) => store.characters.loaded))
       .subscribe(() => {
         // Agregamos un pequeño retraso antes de ocultar el spinner para simluar la carga
-        setTimeout(() => {
-          this.pageLoaderService.hide();
-        }, 1000);
+        //      setTimeout(() => {
+        this.pageLoaderService.hide();
+        //      }, 1000);
       });
 
     this.store.pipe(filter((store) => store.characters.error)).subscribe(() => {
